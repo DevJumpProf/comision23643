@@ -228,46 +228,50 @@ alt+96 */
 }
 console.log(combinarNombres("Bruce","Wayne"));
 
-function obtenerSaludo(nombre) {
+const obtenerSaludo = nombre => `Hola ${nombre}`;console.log(obtenerSaludo("martin"));
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
 
-}
 
-function obtenerAreaRectangulo(alto, ancho) {
-  // Retornar el area de un cuadrado teniendo su altura y ancho
-  // Tu código:
 
-}
+  const obtenerAreaRectangulo= (alto, ancho)=> {
+    // Retornar el area de un cuadrado teniendo su altura y ancho
+    // Tu código:
+return alto*ancho
+  }
+ console.log(obtenerAreaRectangulo(10,20)); 
 
-function retornarPerimetro(lado){
+ const retornarPerimetro=lado=>lado*4
+ console.log(retornarPerimetro(34))
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
 
-}
-
-function areaDelTriangulo(base, altura){
-  //Desarrolle una función que calcule el área de un triángulo.
-  //Escribe tu código aquí
 
 
-}
+  const areaDelTriangulo = (base, altura)=> {
+    //Desarrolle una función que calcule el área de un triángulo.
+    //Escribe tu código aquí
+  return ((base*altura)/2)
+  }
+  console.log(areaDelTriangulo(10,8));
 
-function deEuroAdolar(euro){
-  //Supongamos que 1 euro equivale a 1.20 dólares. 
+  const deEuroAdolar=euro=>`El cambio a dolares es ${euro*1.2}`
+    //Supongamos que 1 euro equivale a 1.20 dólares. 
   //Escribe un programa que pida al usuario un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-
-}
-
-
-function esVocal(letra){
-  //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
-  //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
-  //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
-    //si ingresa una consonante muestre en pantalla dato incorrecto
-  //Escribe tu código aquí
+  console.log(deEuroAdolar(200))
 
 
-}
+
+  const esVocal=letra=>{
+    if(letra.length!=1){
+     alert ("Dato incorrecto ingresaste mas de un caracter")
+    }else if (letra=="a"||letra=="e"||letra=="i"||letra=="o"||letra=="u"){
+      alert (`Efectivamente la letra ${letra} es vocal XD`)
+    }else {
+      alert (`Ingresaste ${letra} NO es vocal :(`)
+    }
+  };
+  esVocal(prompt("escribe una letra").toLowerCase())
+  
