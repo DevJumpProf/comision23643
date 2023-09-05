@@ -86,3 +86,33 @@ let {marca:nuevaMarca,anio}  = auto
 console.log(nuevaMarca);
 
 
+let numero=243671;
+if (numero>9){
+    let aTexto=String(numero);
+    if (aTexto.slice(-1)==1 || aTexto.slice(-1)==3 || aTexto.slice(-1)==7 || aTexto.slice(-1)==9){
+        let resultado="es primo";
+        let aTextoI="";
+        console.log("realizando proceso");
+        for (i=3;i<=(numero/3);i=i+2){
+            aTextoI=String(i);
+            if(aTextoI.slice(-1)==5){
+                i=i+2;
+            };
+            if (numero%i==0){
+                console.log("es divisible por: "+i);
+                resultado="no es primo";
+                break;
+            };
+        };
+        console.log("proceso terminado");
+        console.log(resultado);
+    }else{
+        console.log("no es primo");
+    };
+}else{
+    if (numero==2 || numero==3 || numero==5 || numero==7){
+        console.log("es primo");
+    }else{
+        console.log("no es primo");
+    };
+};
