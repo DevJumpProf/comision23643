@@ -52,7 +52,7 @@ export const Show = () => {
   //6 use effect
   useEffect(() => {
     getHeroes();
-  }, []);
+  }, [heroes]);
 
   //tarea: dentro del use effect tiene que ir la funcion para traer los heroes (buena practica)
 
